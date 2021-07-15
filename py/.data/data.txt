@@ -1,0 +1,248 @@
+No associated diarrhoea
+No associated cough
+No associated vomiting
+AVPU was at A
+AVPU was at V
+AVPU was at P
+AVPU was at U
+Kernig’s sign was negative
+Kernig’s sign was positive
+Admission at Lukolis for inpatient management
+Admission at Busia for inpatient management
+knee pain
+bilateral knee pain
+--patient had difficulty sleeping because of the pain
+--patient had difficulty sleeping because of the cough
+The pain was exacerbated with walking
+The pain was exacerbated with standing
+The pain was exacerbated by walking
+The pain was exacerbated by standing
+The --patient reports some chills and mild shortness of breath, but denies fever
+The --patient reports some chills and mild shortness of breath, but denies vomiting
+The --patient reports some chills and mild shortness of breath, but denies cough
+The --patient reports some chills and mild shortness of breath, but denies chest pain
+The --patient reports some chills and mild shortness of breath, but denies abdominal pain
+The --patient reports some chills and mild shortness of breath, but denies recent trauma to the knees
+the pain was localized to the right knee
+the pain was localized to the left knee
+the pain was primarily localized to the right knee
+the pain was primarily localized to the left knee
+Jaundice on right flexor surface of elbow.
+scaly silver nonpruritic rash on right flexor surface of elbow.
+Mild shortness of breath .
+no chest pain .
+edema .
+No dry cough
+No productive cough
+no colored sputum
+no wheeze
+No polyuria
+No polydipsia
+No skin/hair changes
+no heat intolerance
+no cold intolerance
+Last pain crisis was --date
+Last pain crisis was --num days ago
+history of stuttering priapism
+history of lower extremity ulcers
+no family history of arthritis
+no family history of heart disease
+no family history of Diabetes
+no family history of HTN
+no family history of liver disease
+no family history of kidney disease
+neck Supple with no lyphadenopathy
+neck Supple with no masses
+neck soft with no lyphadenopathy
+neck soft with no masses
+No cervical lymphadenopathy
+No inguinal lymphadenopathy
+no clubbing
+no edema
+no petechiae
+eyes PERRL
+eyes EOM intact
+No nasal discharge
+No nasal congestion
+Oropharynx clear with no lesions
+Oropharynx clear with no erythema
+No crackles
+No rhonchi
+No wheezes
+Cranial nerves II-XII intact
+Cranial nerves II-XII grossly intact
+deep tendon reflexes intact
+deep tendon reflexes symetrical
+deep tendon reflexes --num +
+No rebound tenderness
+No rebound guarding
+Right knee mild swelling and small effusion.
+left knee mild swelling and small effusion.
+Left knee exhibited no signficant swelling or tenderness.
+right knee exhibited no signficant swelling or tenderness.
+The mother reported of hotness of the body which was gradual in onset.
+The father reported of hotness of the body which was gradual in onset.
+Sick looking
+febrile
+Flaring of nasal alae
+subcostal muscle recession
+rhonchi on auscultation
+itching of throat
+itching of eyes
+itching of ears
+neck swelling which --parent reported had been there for --num week despite being on treatment initiated.
+neck swelling which --parent reported had been there for --num days despite being on treatment initiated.
+was of gradual onset, increasing in size and painful
+It was of gradual onset, increasing in size and painful
+reports of poor feeding
+--parent reports of poor feeding
+--patient is able to take fluids
+--patient is not able to take fluids
+exposure to a person with chronic cough
+--patient exposure to a person with chronic cough
+sero status non-reactive
+sero status reactive
+no history of weight loss
+no history of night sweats
+No reported history of trauma/fall.
+reports history of trauma/fall.
+clinically afebrile
+clinically febrile
+vomiting
+developed vomiting
+vomiting was of sudden onset
+vomiting was several episodes
+vomiting was projectile
+reported several episodes of watery diarrhoea for 1 day foul smelling
+reported several episodes of watery diarrhoea for 1 day non bloody
+reported several episodes of watery diarrhoea for 1 day blood
+No reported history of abdominal pains
+No reported history of fullness
+No reported history of headache
+No reported history of reduced appetite
+was of sudden  onset
+was intermittent
+was associated with sweating
+--patient was sick looking
+--patient was sunken eyes
+Acute gastroenteritis with dehydration
+Acute gastroenteritis with severe dehydration
+Vomiting was non projectile
+Vomiting was non bilious
+Sore throat since --num days ago associated cough
+Sore throat since --num days ago associated difficult breathing
+Sore throat since --num days ago no associated cough
+Sore throat since --num days ago no associated difficult breathing
+Marked tenderness with guarding in the right upper quadrant
+Marked tenderness with guarding in the right lower quadrant
+Marked tenderness with guarding in the left upper quadrant
+Marked tenderness with guarding in the left lower quadrant
+Malaria Rapid Diagnostic Test - negative
+Malaria Rapid Diagnostic Test - positive
+Malaria Rapid Diagnostic Test mRDT - negative
+Malaria Rapid Diagnostic Test mRDT - positive
+when he developed
+when she developed
+cough productive in nature
+cough aggravated with cold
+cough not associated with night sweats or weight loss
+cough that productive in nature
+cough that aggravated with cold
+cough that not associated with night sweats or weight loss
+lower chest wall indrawing
+rhonchi on auscultation
+bilateral air entry
+no lower chest wall indrawing
+no added sounds
+unable to drink
+unable to walk
+finger clubbing
+no finger clubbing
+mild epigastric tenderness
+marked epigastric tenderness
+tender splenomegaly approx --num cm
+non tender splenomegaly approx --num cm
+Admit for further management
+refer for further management
+vomiting observed
+no vomiting observed
+Did not report any complaints.
+does not report any complaints.
+fever,
+reports of fever,
+no fever,
+no reports of fever,
+headache sudden in onset
+headache moderate intensity
+headache global and throbbing
+Fever was mild
+Fever was alternating with chills
+she was awake
+he was awake
+No focal neurological deficits
+No focal neurological deficits were elicited
+she was sick looking
+she weak
+she cold extremities
+he was sick looking
+he weak
+he cold extremities
+Fully conscious
+awake but slightly drowsy
+pupils were bilaterally equally and reacting to light
+Kernig’s sign negative
+No obvious distension
+soft
+no tenderness
+no palpable mass
+bowel sounds present and of normal intensity
+Malaria rapid diagnostic test - positive
+Malaria rapid diagnostic test - positive mixed infection
+Malaria rapid diagnostic test mRDT - positive
+Malaria rapid diagnostic test mRDT - positive mixed infection
+Blood slides taken for microscopy
+Blood slides taken for microscopy awaiting results as of 12May2021
+Vomiting was postprandial had 4 episodes in the last 4 hours the clinic visit.
+Vomiting was postprandial had 4 episodes in the last 4 hours preceding the clinic visit.
+Vomiting was non projectile had 4 episodes in the last 4 hours the clinic visit.
+Vomiting was non projectile had 4 episodes in the last 4 hours preceding the clinic visit.
+Vomiting was bilous had 4 episodes in the last 4 hours the clinic visit.
+Vomiting was bilous had 4 episodes in the last 4 hours preceding the clinic visit.
+Vomiting was projectile had 4 episodes in the last 4 hours the clinic visit.
+Vomiting was projectile had 4 episodes in the last 4 hours preceding the clinic visit.
+Participant was sick looking
+Participant was weak
+Participant was puffy facial appearance
+Participant was clinically afebrile
+no distension
+marked supra-pubic tenderness
+costo-vertebral tenderness
+no palpable mass
+Bowel sounds present
+Bowel sounds absent
+Bowel sounds normal intensity
+Normal respiratory rate
+chest clear with good air entry bilaterally
+AVPU A
+AVPU V
+AVPU P
+AVPU U
+awake
+conscious
+oriented to time, place and person
+neck soft
+no focal neurological deficits elicited
+Acute urinary tract infection r/o Ascending Pyelonephritis
+complicated malaria
+mRDT done Negative
+mRDT done positive
+Blood slides for Malaria parasite taken –
+Blood slides for Malaria parasite taken – later found to be negative
+no fits
+no convulsions
+Cough is dry
+Cough is productive
+S1 S2 heard
+no added heart sounds
+MRDT-PF Positive
+MRDT-PF negative

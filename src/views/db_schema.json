@@ -1,0 +1,46 @@
+{
+  "ptable": {
+    "p_id": {
+      "title": "Participant id.",
+      "ctrl": "text-input",
+      "ctrl-opts": "value=\"\"",
+      "regex" : "^[vV].*",
+      "regex-": "^[vV][0-9]{3}\\-[0-9]{4}\\-[sS]1$",
+      "required": true,
+      "filters": "uppercase"
+    },
+    "p_name": {
+      "title": "Name",
+      "ctrl": "text-input",
+      "required": true
+    },
+    "p_dob": {
+      "title": "Date of birth",
+      "ctrl": "text-input",
+      "ctrl-opts": "type=\"date\"",
+      "required": true
+    },
+    "p_gender": {
+      "title": "Gender",
+      "ctrl": "radio-select",
+      "ctrl-opts": "name=\"p_gender\" choices=\"Male,Female\"",
+      "required": true
+    },
+    "p_enroll_date": {
+      "title": "Date of enrollment",
+      "ctrl": "text-input",
+      "ctrl-opts": "type=\"date\"",
+      "required": true
+    },
+    "__collections": {
+      "consults": {
+        "date": "Date of consultation",
+        "time": "Time of consultation",
+        "pc": "Presenting complaints",
+        "hpi": "History of presenting illness",
+        "oe": "On examination",
+        "impression": "Clinical impression"
+      }
+    }
+  }
+}

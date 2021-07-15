@@ -1,0 +1,13 @@
+.nav--bar__widget {
+  margin-right: 8px;
+  margin-left: 8px;
+
+  font-size: 0.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+input[type="text"] {
+  width: 128px;
+}
