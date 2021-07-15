@@ -10,6 +10,8 @@ import AddParticipant from "./views/participant/add"
 import Workflow from "./views/participant/workflow"
 import css_fab from "./views/css/fab.css"
 
+let debug_landing = "/workflow/docid"
+
 const __history = {
 
   pushState(a, viewport, link) {
@@ -18,7 +20,7 @@ const __history = {
     this.viewport = viewport;
 
   },
-  location: "/consults/document_id",
+  location: debug_landing,
   links: [],
   popState() {
     if (this.links.length > 1) {
@@ -87,7 +89,7 @@ class App {
     });
 
     if (route === undefined) {
-      route = { path: "/consults/document_id", view: this.search }
+      route = { path: debug_landing, view: this.search }
 
     }
     

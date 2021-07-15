@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "serve": "webpack server"
+    "serve": "webpack server",
+    "adb-u": "./.vscode/adb-u.sh",
+    "adb-r": "./.vscode/adb-am.sh"
   },
   "author": "sQripter",
   "license": "ISC",

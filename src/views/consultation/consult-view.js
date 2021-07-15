@@ -4,11 +4,8 @@ import Text from '../../modules/text'
 
 import AbstractView from '../abstract/abstract-view'
 
-
 //const complaints = ",Vomiting,Cough,Night sweats,Dyspneoa,Fatigue,Chest pain,Abdominal pain,Running nose,Wheezing,Joint pains,Podagra,";
-const T = new Text()
 
-const complaints = T.complaints()
 export default class Consultation extends AbstractView {
     sections = {
         "pc": `Presenting complaints`,
@@ -19,6 +16,7 @@ export default class Consultation extends AbstractView {
 
     constructor(view) {
         super(view)
+        this.T = new Text()
     }
     __addEditableDiv(div) {
         const ed = document.createElement("div");
@@ -153,20 +151,11 @@ export default class Consultation extends AbstractView {
         }
         this.view.appendChild(frag);
 
+        this.view.addEventListener("keyup", evt => this.T.textEvent(evt))
 
-        // adding the components
-        this.view.appendChild(document.createElement("my-jacold"))
-        this.bboxx = document.createElement("div")
-        this.bboxx.classList.add("bboxx")
-        //this.bboxx.textContent = "see me"
-        this.view.appendChild(this.bboxx)
-        //
 
-        this.view.addEventListener("keypress", evt => this.__keypress(evt))
-        this.view.addEventListener("keyup", evt => this.__func_text(evt))
-        //this.view.addEventListener("mouseup",)
-        
-        window.json_data = T.complaints()
+
+
     }
 
 }

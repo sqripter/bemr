@@ -1,3 +1,4 @@
+import css_tabs from "./../../views/css/views.css"
 import css from "./workflow.css"
 import css_table from "./../css/table.css"
 
@@ -118,7 +119,7 @@ export default class Workflow {
 
             const tab = document.createElement("div");
             this.tabs[tabName] = tab
-            tab.classList.add("tab");
+            tab.classList.add("tab","tab__"+tabName.toLowerCase());
             tab.setAttribute("viewport","")
 
             // remove after debug

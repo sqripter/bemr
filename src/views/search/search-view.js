@@ -1,6 +1,8 @@
 import {html} from "lit"
 import css from "./search-view.css"
 import css_table from "./../css/table.css"
+import css_app from "./../css/app.css"
+
 import db_schema from "../db_schema.json"
 export default class Search {
     constructor(view, firedb) {
@@ -36,7 +38,7 @@ export default class Search {
 
         const func = (snapshot) => {
 
-            let html = [`<table class="content-table">`];
+            let html = [`<table class="content-table app--bgcolor">`];
 
             html.push("<thead><tr>")
             
