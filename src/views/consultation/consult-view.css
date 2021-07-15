@@ -1,0 +1,35 @@
+.tab__consults{
+    position: relative;
+    display: block;
+    min-height: 128px;
+
+    margin-bottom: 4px;
+    border: 2px solid #004134;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: normal;
+}
+.tab__consults__pc{
+    margin-bottom: 4px;
+}
+
+.tab__edit{
+    position: static;
+    margin: 4px;
+    
+    min-height: 32px;
+
+    border: solid 1px green;
+    background: transparent;
+    z-index: 5;
+    color: #000000;
+
+    padding: 4px;
+}
+.tab__edit--suggestion{
+    color: grey;
+    z-index: 4;
+
+}

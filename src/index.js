@@ -18,7 +18,7 @@ const __history = {
     this.viewport = viewport;
 
   },
-  location: "/search",
+  location: "/consults/document_id",
   links: [],
   popState() {
     if (this.links.length > 1) {
@@ -59,9 +59,13 @@ class App {
       evt.preventDefault();
     }
 
+    if (!target.matches("[datalink],[tablink]")){
+      return
+    }
+
     let elm = target.hasAttribute("href") ? target : target.parentElement;
 
-    let href = elm.attributes["href"].nodeValue;
+    let href= elm.attributes["href"].nodeValue;
 
 
     if (target.matches("[datalink]")) {
@@ -83,9 +87,10 @@ class App {
     });
 
     if (route === undefined) {
-      route = { path: "/search", view: this.search }
+      route = { path: "/consults/document_id", view: this.search }
 
     }
+    
 
     const regex = pathToRegex(route.path);
     let params = regex.exec(route.path).slice(1)

@@ -1,4 +1,4 @@
-import '../css/views.css'
+import styles from "./consult-view.css"
 
 import Text from '../../modules/text'
 
@@ -23,7 +23,7 @@ export default class Consultation extends AbstractView {
     __addEditableDiv(div) {
         const ed = document.createElement("div");
         ed.setAttribute("contentEditable", "true");
-        ed.classList.add("tabs__edit__line");
+        ed.classList.add("tab__edit__line");
         //ed.textContent  = "."
         div.appendChild(ed)
     }
@@ -42,10 +42,10 @@ export default class Consultation extends AbstractView {
     __removeSuggestion(node) {
         // get the sibling
         let j = node.parentElement;
-        while (!j.matches(".tabs__edit")) {
+        while (!j.matches(".tab__edit")) {
             j = j.parentNode;
         }
-        let elms = j.getElementsByClassName("tabs__edit--suggestion");
+        let elms = j.getElementsByClassName("tab__edit--suggestion");
         for (let elm of elms) {
             elm.parentNode.removeChild(elm);
         }
@@ -132,10 +132,10 @@ export default class Consultation extends AbstractView {
         let num = 0;
         for (const section in this.sections) {
             const elm = document.createElement("div");
-            elm.classList.add("tabs__consult", "tabs__consult__" + section);
+            elm.classList.add("tab__consults", "tab__consults__" + section);
 
             const caption = document.createElement("div")
-            caption.classList.add("tabs__caption")
+            caption.classList.add("tab__caption")
             caption.textContent = this.sections[section]
 
             /**/elm.appendChild(caption)
@@ -143,7 +143,7 @@ export default class Consultation extends AbstractView {
 
             const edit = document.createElement("div");
             edit.setAttribute("contentEditable", "true");
-            edit.classList.add("tabs__edit");
+            edit.classList.add("tab__edit");
             this.__addEditableDiv(edit)
             /**/elm.appendChild(edit);
 
@@ -165,8 +165,7 @@ export default class Consultation extends AbstractView {
         this.view.addEventListener("keypress", evt => this.__keypress(evt))
         this.view.addEventListener("keyup", evt => this.__func_text(evt))
         //this.view.addEventListener("mouseup",)
-
-
+        
         window.json_data = T.complaints()
     }
 

@@ -1,7 +1,6 @@
 const json_data = require("../../py/.data/model.json")
 
 
-
 export default class Text {
     constructor() {
         this.__complaints = json_data.tokens.join()
@@ -56,10 +55,6 @@ export default class Text {
 
 
         }
-
-
-
-
 
         console.table(msg)
 
