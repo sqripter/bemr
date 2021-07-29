@@ -45,6 +45,21 @@ module.exports = {
         test: /\.(csv|tsv)$/i,
         use: ["csv-loader"],
       },
+      {
+				test: /\.woff(2)?$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 10000,
+							name: './font/[hash].[ext]',
+							mimetype: 'application/font-woff'
+						}
+					}
+				]
+			}
+
+
     ],
   },
   plugins: [

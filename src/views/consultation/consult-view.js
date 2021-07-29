@@ -1,8 +1,8 @@
 import styles from "./consult-view.css"
 
-import Text from '../../modules/text'
-
 import AbstractView from '../abstract/abstract-view'
+
+import Keyboard from "../kbd/kbd"
 
 //const complaints = ",Vomiting,Cough,Night sweats,Dyspneoa,Fatigue,Chest pain,Abdominal pain,Running nose,Wheezing,Joint pains,Podagra,";
 
@@ -11,12 +11,41 @@ export default class Consultation extends AbstractView {
         "pc": `Presenting complaints`,
         "hpc": "History",
         "ge": "General examination",
-        "se": "Systems Review" 
+        "se": "Systems Review",
+        "impression": "Impression",
+        "plan": "Plan",
+        "meds": "Medication",
+        "labs": "Labs & Imaging",
     }
 
-    constructor(view) {
+    constructor(view, firedb) {
         super(view)
-        this.T = new Text()
+        this.firedb = firedb;
+        this.kbd = new Keyboard(".tab__edit")
+        this.navTop = document.createElement("div")
+        let btn = document.createElement("button")
+        btn.textContent = "Save"
+        this.navTop.appendChild(btn)
+        btn.addEventListener("click", e => this.saveConsult(e))
+
+    }
+
+    saveConsult(evt) {
+        console.log("..Saving")
+
+        let data = {}
+
+        for (const key in this.sections) {
+            let value = document.getElementById(`text_${key}`).value
+            data[key] = value
+        }
+
+        console.table(data)
+
+
+
+        evt.stopImmediatePropagation()
+
     }
     __addEditableDiv(div) {
         const ed = document.createElement("div");
@@ -31,101 +60,29 @@ export default class Consultation extends AbstractView {
         let rng = sel.getRangeAt(0);
         return rng
     }
-    __keypress(evt) {
-        if (evt.keyCode == 13) {
-            let node = this.__getCaretRng().endContainer;
-            this.__removeSuggestion(node)
-        }
-    }
-    __removeSuggestion(node) {
-        // get the sibling
-        let j = node.parentElement;
-        while (!j.matches(".tab__edit")) {
-            j = j.parentNode;
-        }
-        let elms = j.getElementsByClassName("tab__edit--suggestion");
-        for (let elm of elms) {
-            elm.parentNode.removeChild(elm);
-        }
-    }
 
-    __func_text() {
-
-        let rng = this.__getCaretRng();
-        let node = rng.endContainer;
-
-        let rawtext = node.textContent.toLowerCase();
-        let text = rawtext.trim()
-
-        let choices = T.suggest(rawtext)
-
-        if (text.length < 3 || text == ",") {
-
-            this.__removeSuggestion(node);
-            return;
-        };
-
-        let start = complaints.toLocaleLowerCase().indexOf("," + text);
-        let stop = start;
-
-
-        //what is the node after the node
-        let sib = node.nextElementSibling;
-
-        if (start < 0) {
-            if (sib != undefined && sib.hasAttribute("suggestion")) { sib.textContent = "" }    
-            return
-
-        } else if (start >= 0) {
-            stop = complaints.indexOf(",", start + 1);
-            
-        }
-
-        let suggestion = complaints.slice(start + 1, stop)
-        let fragment = suggestion.slice(text.length);
-
-        //console.table({ text: text, suggestion: suggestion, fragment: fragment })
-
-
-        if (/\s\s$/.test(rawtext)) { // complete the suggestion
-            
-            node.textContent = suggestion;
-            node.parentNode.removeChild(sib);
-
-
-            let range = document.createRange();
-            range.selectNodeContents(node);
-            range.collapse(false); // docs : range.collapse(toStart);
-
-            let sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-
-        }
-        else if (sib != undefined && sib.hasAttribute("suggestion")) {//continue with suggestion
-            sib.innerText = fragment
-        
-        } else { //add the suggestion div
-            let sugg = document.createElement("span");
-            sugg.classList.add("tabs__edit--suggestion");
-            sugg.setAttribute("contentEditable", "false");
-            sugg.setAttribute("suggestion", "suggestion");
-            node.parentNode.insertBefore(sugg, sib);
-            sugg.textContent = fragment;
-        }
-    }
 
 
     repaint(args, view) {
-        console.table(args)
 
         this.view = (view || this.view);
+        this.current_session = args
+
+        console.log(args)
 
         super.repaint()
-        
+
         const frag = document.createDocumentFragment();
 
         this.view.innerHTML = "";
+
+        let header = `
+        <div>
+        <button>Save</button>
+        </div>
+        `
+
+        this.view.appendChild(this.navTop)
 
         let num = 0;
         for (const section in this.sections) {
@@ -139,10 +96,22 @@ export default class Consultation extends AbstractView {
             /**/elm.appendChild(caption)
 
 
-            const edit = document.createElement("div");
-            edit.setAttribute("contentEditable", "true");
-            edit.classList.add("tab__edit");
-            this.__addEditableDiv(edit)
+            const edit = document.createElement("textarea");
+
+            edit.id = `text_${section}`
+            //edit.setAttribute("contentEditable", "true");
+            edit.classList.add("tab__edit", "tab__edit--box-sizing", "consults__textarea")
+
+            // we need to use js :-) to auto resize the textarea vertical
+            // ONLY works when keyboard is used.
+            edit.addEventListener("input", e => {
+                let t = e.path[0];
+                if (t.clientHeight < t.scrollHeight) {
+                    t.style.height = `${(t.scrollHeight + 10)}px`; // the 10 includes roughly the padding(4+4) and borderwidth(1+1)
+                }
+            })
+
+            //this.__addEditableDiv(edit)
             /**/elm.appendChild(edit);
 
             frag.appendChild(elm);
@@ -151,10 +120,7 @@ export default class Consultation extends AbstractView {
         }
         this.view.appendChild(frag);
 
-        this.view.addEventListener("keyup", evt => this.T.textEvent(evt))
-
-
-
+        this.kbd.init()
 
     }
 

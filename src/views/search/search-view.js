@@ -24,17 +24,16 @@ export default class Search {
             <lable class="nav--bar__widget" for="datepicker">Visit date
                 <input id="datepicker" min="2020-01-01" max="2030-12-31" type="date"></input>
             <lable>
+            <button class="nav--bar__widget" datalink href="/pnew">Enroll new</button>
         </div>`
     }
 
 
     repaint() {
-        this.view.innerHTML = this.html_header;
-
+        this.view.innerHTML = this.html_header 
         const frag = document.createDocumentFragment();
         const table = document.createElement("table")
         frag.appendChild(table);
-
 
         const func = (snapshot) => {
 
@@ -63,7 +62,7 @@ export default class Search {
 
             });
             html.push("</table>")
-            this.view.innerHTML+= html.join("") + this.fab()
+            this.view.innerHTML+=  `<div class="table-container">${html.join("")}</div>`
         }
 
 

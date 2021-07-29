@@ -11,6 +11,8 @@ import Workflow from "./views/participant/workflow"
 import css_fab from "./views/css/fab.css"
 
 let debug_landing = "/workflow/docid"
+debug_landing = "/consults/docid"
+debug_landing = "/search"
 
 const __history = {
 

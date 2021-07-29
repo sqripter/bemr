@@ -1,16 +1,20 @@
 .navbar{
     padding: 8px 8px 0px 8px;
     background: #004134;
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
 .navbar__button{
+    display: inline-block;
+
     background: rgba(255,255,255, 0.3);
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     padding : 4px;
     border: none;
-    min-width: 120px;
-    line-break: 48px;
-    min-height: 48px;
+    min-width: 72px;
+    line-break: 36px;
+    min-height: 36px;
     margin-right: 4px;
     color: #ffffff;
 }
@@ -56,19 +60,38 @@
     padding: 4px 4px 0px 4px;
 }
 .tab__edit{
-    position: static;
+    position: relative;
     margin: 0px 4px 4px 4px;
+    max-width: 98%;
+    min-width: 98%;
+
+    word-wrap: break-word;
     
     min-height: 32px;
 
     border: solid 1px green;
+    border-radius: 5px;
     background: transparent;
     z-index: 5;
     color: #000000;
 
     padding: 4px;
+
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color:rgba(1, 46, 33);
+    
 }
+
+.tab__edit--box-sizing {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+
 .tab__suggestion{
     min-height: 32;
-    background-color: ;
 }

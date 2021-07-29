@@ -19,12 +19,19 @@ export default class AddParticipant {
             return (!key.startsWith("__"))
         }).forEach(key => { this.ptable_flds[key] = db_schema["ptable"][key] })
 
+        this.html_header = `
+
+        <div class="nav--bar">
+            <button class="nav--bar__widget" datalink href="/search">Back</button>
+            <button class="nav--bar__widget" datalink save href="/search">Save</button>
+        </div>`
+
 
     }
 
     repaint() {
 
-        let html = ""
+        let html = this.html_header
 
         for (const fld in this.ptable_flds) {
             console.log("<>", fld)
@@ -46,13 +53,12 @@ export default class AddParticipant {
                     ></${fld_ctrl}>
             </div>`
 
-            this.view.innerHTML = html + `<div class="fab fab--right" datalink href="/search" >Save<div>`
-            this.view.innerHTML += `<div class="fab fab--left" datalink href="/search" ><-</div>`
+            this.view.innerHTML = html;
         }
 
 
         this.view
-            .querySelector(".fab--right,[datalink][href='/search']")
+            .querySelector("[save][datalink][href='/search']")
             .addEventListener("click",
                 (function (__this) { return function (evt) { __this.btnSaveClick(evt, __this) } })(this)
             )// this.clickClosure(this) ) 

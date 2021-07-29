@@ -1,0 +1,4 @@
+.consults__textarea{
+    overflow: auto;
+    resize: vertical;
+}
