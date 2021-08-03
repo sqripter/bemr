@@ -1,0 +1,32 @@
+.navbar {
+  padding: 8px 8px 8px 8px;
+  background: #004134;
+  min-height: 32px;
+  display: block;
+}
+
+
+.navbar__button  {
+    
+    background-color:#009879;
+    border-radius: 5px;
+
+    border: none;
+    
+    font-size: 0.9rem;
+
+    padding : 8px;
+    cursor:pointer;
+  }
+  
+  .navbar__button:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+  }
+
+  .navbar__button--right{
+    float: right;
+  }
+  .navbar__button--left{
+    float: left;
+  }

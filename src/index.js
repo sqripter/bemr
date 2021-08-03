@@ -3,15 +3,15 @@ import { Jacold } from "./views/lit-components/jacold";
 import { TextInput } from "./views/lit-components/input"
 import { RadioSelect } from "./views/lit-components/radioselect"
 
-import Consultation from "./views/consultation/consult-view"
+import ConsultsAdd from "./views/consults/consults-add"
+import ConsultsList from "./views/consults/consults-list";
 import Login from "./views/login/login-view";
 import Search from "./views/search/search-view";
 import AddParticipant from "./views/participant/add"
 import Workflow from "./views/participant/workflow"
-import css_fab from "./views/css/fab.css"
 
-let debug_landing = "/workflow/docid"
-debug_landing = "/consults/docid"
+let debug_landing = "/workflow/docid_XXXYYY234"
+//debug_landing = "/consults/docid"
 debug_landing = "/search"
 
 const __history = {
@@ -38,9 +38,10 @@ class App {
     this.fdb = firedb();
     this.body = document.body;
 
-    this.consults = new Consultation(this.body);
+    this.consults_add = new ConsultsAdd(this.body,this.fdb);
+    this.consults_list = new ConsultsList(this.body,this.fdb);
     this.search = new Search(this.body, this.fdb);
-    this.login = new Login(this.body, { success: "/search" });
+    this.login = new Login(this.body, this.fdb);
     this.addParticipant = new AddParticipant(this.body, this.fdb);
     this.workflow = new Workflow(this.body, this.fdb)
 
@@ -52,7 +53,9 @@ class App {
       { path: "/login", view: this.login },
       { path: "/pnew", view: this.addParticipant },
       { path: "/workflow/:document_id", view: this.workflow },
-      { path: "/consults/:document_id", view: this.consults }
+      { path: "/consults/:document_id/listing", view:this.consults_list},
+      { path: "/consults/:document_id/:action", view:this.consults_add},
+
     ]
 
   }

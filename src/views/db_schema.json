@@ -4,7 +4,7 @@
       "title": "Participant id.",
       "ctrl": "text-input",
       "ctrl-opts": "value=\"\"",
-      "regex" : "^[vV].*",
+      "regex": "^[vV].*",
       "regex-": "^[vV][0-9]{3}\\-[0-9]{4}\\-[sS]1$",
       "required": true,
       "filters": "uppercase"
@@ -34,12 +34,46 @@
     },
     "__collections": {
       "consults": {
-        "date": "Date of consultation",
-        "time": "Time of consultation",
-        "pc": "Presenting complaints",
-        "hpi": "History of presenting illness",
-        "oe": "On examination",
-        "impression": "Clinical impression"
+        "date": {
+          "title": "Date of consultation",
+          "value": "date()",
+          "ctrl" : "label"
+        },
+        "time": {
+          "title": "Time",
+          "value": "time()",
+          "ctrl" : "label"
+        },
+        "pc": {
+          "title": "Presenting complaints",
+          "required": true,
+          "ctrl": "textarea",
+          "ctrl-opts": "textpred=\"pc\" rows=3"
+        },
+        "hpi": {
+          "title": "History of presenting illness",
+          "required": true,
+          "ctrl": "textarea",
+          "ctrl-opts": "textpred=\"hpi\" rows=5"
+        },
+        "imp": {
+          "title": "Impression",
+          "required": true,
+          "ctrl": "textarea",
+          "ctrl-opts": "textpred=\"imp\" rows=2"
+        },
+        "plan": {
+          "title": "History of presenting illness",
+          "required": true,
+          "ctrl": "textarea",
+          "ctrl-opts": "textpred=\"plan\" rows=2"
+        },
+        "meds": {
+          "title": "Medications",
+          "required": true,
+          "ctrl": "textarea",
+          "ctrl-opts": " textpred=\"meds\" rows=2"
+        }
       }
     }
   }

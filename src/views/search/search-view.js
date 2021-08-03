@@ -3,6 +3,9 @@ import css from "./search-view.css"
 import css_table from "./../css/table.css"
 import css_app from "./../css/app.css"
 
+
+import css_navbar from "./../css/navbar.css"
+
 import db_schema from "../db_schema.json"
 export default class Search {
     constructor(view, firedb) {

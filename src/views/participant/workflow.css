@@ -1,0 +1,18 @@
+.viewport div{
+    display: block;
+    margin-bottom: 32px;
+}
+.viewport button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 8px;
+    min-width: 128px;
+
+    padding : 16px;
+    height : 36px;
+
+    vertical-align: middle;
+}

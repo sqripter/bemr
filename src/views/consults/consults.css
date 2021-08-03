@@ -1,0 +1,46 @@
+.consults__textarea{
+    overflow: auto;
+    resize: vertical;
+}
+
+.consult__tabs textarea{
+
+    position: relative;
+    display: block;
+  
+    margin-bottom: 4px;
+  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: normal;
+  
+    z-index: 9;
+
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+
+    position: relative;
+    margin: 0px 4px 4px 4px;
+    max-width: 98%;
+    min-width: 98%;
+  
+    word-wrap: break-word;
+  
+    min-height: 32px;
+  
+    border: solid 1px green;
+    border-radius: 5px;
+    background: transparent;
+    z-index: 5;
+    color: #000000;
+  
+    padding: 4px;
+  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: rgba(1, 46, 33);
+}

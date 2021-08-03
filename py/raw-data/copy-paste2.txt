@@ -10,25 +10,6 @@ Cushing’s syndrome
 right to left cardiac shunt
 plethoric appearance of a patient with Cushing’s syndrome
 
-4627
-4627
-4627
-4627
-4627
-0
-0
-4627
-4627
-4627
-4627
-4627
-0
-0
-4627
-4627
-4627
-4627
-4627
 
 pediatrician, a 
 migraine without aura
@@ -41,29 +22,10 @@ head trauma.
 chronic progressive headach
 neuroﬁ bromatosis
 impaired extraocular move- ments
-rapid nose-to-ﬁ nger movement
-asymmetric refl exe
-Step(s)	No. of staff assigned		
-	R1	R2	Suggestions
-1,2,3,4	2		interns (monitored)
-5,7	*6		Employee staff (current)
-6,8,10	1	1	Lab technician/ specialist(monitored)
-9		*6	Outsource / locum / Hire 5 +1
-			
-Total staff	9	7	
-			
-*check the next spread sheet for analysis			
+rapid nose-to-ﬁnger movement
+asymmetric reflexes
 
-
-55
-
-Q
-
-Quentin Awori
-Qawori@gmail.com
-
-Quentin Awori
-bdominal pain
+abdominal pain
 
 Anxiety
 
@@ -125,5 +87,3 @@ Speech and language concerns
 Vomiting
 
 Wheezing
-https://towardsdatascience.com/neural-networks-and-malaria-520a5b7fb6ed
-atasets/
