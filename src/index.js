@@ -5,6 +5,7 @@ import { RadioSelect } from "./views/lit-components/radioselect"
 
 import ConsultsAdd from "./views/consults/consults-add"
 import ConsultsList from "./views/consults/consults-list";
+import ConsultsView from "./views/consults/consults-view";
 import Login from "./views/login/login-view";
 import Search from "./views/search/search-view";
 import AddParticipant from "./views/participant/add"
@@ -40,6 +41,7 @@ class App {
 
     this.consults_add = new ConsultsAdd(this.body,this.fdb);
     this.consults_list = new ConsultsList(this.body,this.fdb);
+    this.consults_view = new ConsultsView(this.body,this.fdb);
     this.search = new Search(this.body, this.fdb);
     this.login = new Login(this.body, this.fdb);
     this.addParticipant = new AddParticipant(this.body, this.fdb);
@@ -55,7 +57,7 @@ class App {
       { path: "/workflow/:document_id", view: this.workflow },
       { path: "/consults/:document_id/listing", view:this.consults_list},
       { path: "/consults/:document_id/:action", view:this.consults_add},
-
+      { path: "/consults/:document_id/:consult_id/view", view:this.consults_view},
     ]
 
   }
@@ -64,6 +66,7 @@ class App {
     let target = evt.path[0];
     if (target.matches("a[datalink]")) {
       evt.preventDefault();
+      evt.stopImmediatePropagation()
     }
 
     if (!target.matches("[datalink],[tablink]")){

@@ -34,6 +34,7 @@
     },
     "__collections": {
       "consults": {
+        "__tableview_fields":["date","time","pc","imp"],
         "date": {
           "title": "Date of consultation",
           "value": "date()",
@@ -63,7 +64,7 @@
           "ctrl-opts": "textpred=\"imp\" rows=2"
         },
         "plan": {
-          "title": "History of presenting illness",
+          "title": "Plan",
           "required": true,
           "ctrl": "textarea",
           "ctrl-opts": "textpred=\"plan\" rows=2"

@@ -8,7 +8,7 @@ import db_schema from "../db_schema.json"
 
 //const complaints = ",Vomiting,Cough,Night sweats,Dyspneoa,Fatigue,Chest pain,Abdominal pain,Running nose,Wheezing,Joint pains,Podagra,";
 
-export default class ConsultsAdd {
+export default class ConsultsView {
 
     static filter_funcs = {
         "uppercase": s => { return new String(s).toUpperCase() },
@@ -35,10 +35,6 @@ export default class ConsultsAdd {
                 Back
             </button>
     
-            <button id="btnSave" class="navbar__button--right" datalink href="/consults/${this.current_session.document_id}/listing">
-                Save
-            </button>
-
         </div>`
     }
 
@@ -52,35 +48,6 @@ export default class ConsultsAdd {
         return 'value' in el ? el.value : el.textContent || false;
     }
 
-    saveConsult(evt) {
-
-        let data = {}
-
-        for (const key in this.schema) {
-            if (key.startsWith("__")) 
-                continue;
-            let elm = document.getElementById(`${key}`)
-            data[key] = this.readEl(elm)+""
-        }
-
-        const pref = this.firedb.collection("ptable").doc(this.current_session["document_id"])
-
-        pref.get().then(doc => {
-            if (!doc.exists) {
-                alert("That document does not exist")
-
-                evt.stopImmediatePropagation() // of there is a problem
-
-                return
-            }
-
-            pref.collection("consults").add(data).then(ref => {
-                console.log("Added new record on ref :", ref.id)
-                console.table(data)
-            })
-        })
-
-    }
 
     repaint(args, view) {
 
@@ -95,7 +62,7 @@ export default class ConsultsAdd {
         for (const [key, obj] of Object.entries(this.schema)) {
 
             html += `
-            <${obj.ctrl} id="${key}" placeholder="${obj.title}" ${obj["ctrl-opts"] || ""}>${obj.value ? ConsultsAdd.filter_funcs[obj.value]() : ""}</${obj.ctrl}>
+            <${obj.ctrl} id="${key}" placeholder="${obj.title}" ${obj["ctrl-opts"] || ""}>${obj.value ? ConsultsView.filter_funcs[obj.value]() : ""}</${obj.ctrl}>
             <br/>
             `
         }

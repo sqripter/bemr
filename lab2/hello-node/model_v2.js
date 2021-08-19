@@ -1,0 +1,1 @@
+../spaCy/model_v2.js
